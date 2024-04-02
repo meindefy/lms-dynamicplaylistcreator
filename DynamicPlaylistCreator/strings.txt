@@ -1,158 +1,216 @@
 PLUGIN_DYNAMICPLAYLISTCREATOR
 	EN	Dynamic Playlist Creator
+	
 
 PLUGIN_DYNAMICPLAYLISTCREATOR_DESC
-	EN	Helps you create custom smart playlists (dynamic playlists) for the Dynamic Playlists plugin using templates. More information, screenshots and FAQ on the GitHub page.
-
+	EN	Helps you create custom smart playlists (dynamic playlists) for the Dynamic Playlists plugin using templates. More information on the GitHub page.
+	DE	Hilft, anhand von Vorlagen eigene dynamische Wiedergabelisten für das Dynamische Wiedergabelisten-Plugin zu erstellen. Mehr Informationen auf der GitHub Seite.
+	
 PLUGIN_DYNAMICPLAYLISTCREATOR_SETTINGS
 	EN	Various Settings
+	DE	Verschiedene EInstellungen
 
 SETTINGS_PLUGIN_DYNAMICPLAYLISTCREATOR_FAQ_LINK_TEXT
 	EN	Click here to read the FAQ.
+	DE	Klicke hier für die FAQ.
 
 SETTINGS_PLUGIN_DYNAMICPLAYLISTCREATOR_FAQ_LINK
 	EN	https://github.com/AF-1/lms-dynamicplaylistcreator#faq
+	DE	https://github.com/AF-1/lms-dynamicplaylistcreator#faq
 
 SETTINGS_PLUGIN_DYNAMICPLAYLISTCREATOR_CUSTOMDIRPARENTFOLDERPATH
 	EN	<u>Parent</u> folder path for folder <wbr>with&nbsp;your&nbsp;dynamic&nbsp;playlist&nbsp;definition&nbsp;files
+	DE	<u>Übergeordnetes</u> Verzeichnis für den Ordner mit den Definitionen der eigenen dynamischen Wiedergabelisten
 
 SETTINGS_PLUGIN_DYNAMICPLAYLISTCREATOR_CUSTOMDIRPARENTFOLDERPATH_DESC
 	EN	Choose a location for the folder where to put the dynamic playlist definition files you've created.
-
+	DE	Wähle einen Ort für den Ordner in dem die Definitionsdateien der eigenen dynamischen Wiedergabelisten liegen.
+	
 SETTINGS_PLUGIN_DYNAMICPLAYLISTCREATOR_DISPLAYEXPORTBTN
 	EN	Display Export button
-
+	DE	Zeige Export-Schaltfläche
+	
 SETTINGS_PLUGIN_DYNAMICPLAYLISTCREATOR_DISPLAYEXPORTBTN_DESC
 	EN	Unless you want to <b>edit the SQLite statement of a dynamic playlist</b> created with DPLC <b>manually</b>, you don't need the <i>Export</i> button.<br><br>Users familiar with SQLite can use the <b>Export</b> button to permanently move a dynamic playlist, that's currently managed by DPLC, to the <i>Dynamic Playlists</i> plugin's folder for custom dynamic playlists called <i>DPL-custom-lists</i>. There you can edit it like any other custom dynamic playlist with your favorite code editor.<br><br>Moved dynamic playlists are now managed by <i>Dynamic Playlists</i> only, no longer by DPLC. They are no longer listed in DPLC.
-
+	DE	Die Export-Schaltfläche wird nur benötigt, wenn der SQLite-Ausdruck einer durch DPLC generierten dynamischen Wiedergabeliste editiert werden soll. Anwender, die mit SQLite vertraut sind, können durch diese Schaltfläche eine dynamische Wiedergabeliste, die zurzeit durch DPLC verwaltet wird, permament in das Verzeichnis für eigene dynamische Wiedergabelisten des Dynamische-Wiedergalisten-Plugins verschieben. Dort kann man die Liste dann wie jede andere mit einem bevorzugten Code-Editor bearbeiten. Verschobene dynamische Wiedergabeliste werden dann nur noch durch das Dynamische-Wiedergabelisten-Plugin verwaltet, nicht mehr in DPLC. Dort werden sie nicht mehr aufgeführt.	
+	
 SETTINGS_PLUGIN_DYNAMICPLAYLISTCREATOR_DISPLAYPLAYBTN
 	EN	Display Play button
+	DE	Wiedergabe-Schaltfläche anzeigen
 
 SETTINGS_PLUGIN_DYNAMICPLAYLISTCREATOR_DISPLAYPLAYBTN_DESC
 	EN	You can <b>only</b> start dynamic playlists directly in DPLC that do <b><u>not</u> ask for user input when started</b>. DPLC does not contain code to handle user-input parameters.<br>After you have created a <b>new</b> dynamic playlist that does not ask for user input, please wait a few seconds before you try to start it with the <i>Play</i> button. <i>Dynamic Playlists</i> needs a moment to update the list of available dynamic playlists.<br><br>Starting dynamic playlists without user-input parameters in DPLC is just a quick way to test a dynamic playlist. The <i>Dynamic Playlists</i> plugin is still where you start your mixes, not DPLC.
-
+	DE	Man kann dynamische Wiedergabelisten <b>nur</b> direkt in DPLC starten, wenn sie keine Benutzereingaben benötigen. DPLC enthält keinen Code, um mit Benutzereingaben umzugehen. Nach der Erstellung einer neuen dynamischen Wiedergabeliste ohne Benutzerparameter, bitte vor dem Start der Wiedergabeliste einige Sekunden warten. Das Dynamische-Wiedergabelisten-Plugin ist immer noch der richtige Ort, um die Wiedergabeliste zu starten, nicht DPLC.
+	
 SETTINGS_PLUGIN_DYNAMICPLAYLISTCREATOR_HIDEDPLREFRESHMSG
 	EN	Hide refresh message
+	DE	Aktualisierungsmittleiung verbergen
 
 SETTINGS_PLUGIN_DYNAMICPLAYLISTCREATOR_HIDEDPLREFRESHMSG_DESC
 	EN	If you create, edit, save, delete or export a dynamic playlist in DPLC, the DPLC web page listing your dynamic playlists will display a message to remind you that the <b>Dynamic Playlists</b> plugin may need a few seconds to update the list of available dynamic playlists. You can disable this message with this setting.
+	DE	Nach dem Erzeugen, Editieren, Speichern, Löschen oder Export einer Dynamischen Wiedergabeliste zeigt die DPLC-Webseite eine Nachricht zur Erinnerung, dass das Dynamische-Wiedergabelisten-Plugin etwas Zeit braucht, um die Liste der vorhandenen dynamischen Wiedergabelisten zu aktualisieren. Mit dieser Einstellung kann diese Nachricht unterdrückt werden.
 
 SETTINGS_PLUGIN_DYNAMICPLAYLISTCREATOR_EXACTTITLESEARCH
 	EN	Use exact album title search
+	DE	Verwende exakte Suche für Albumtitel
 
 SETTINGS_PLUGIN_DYNAMICPLAYLISTCREATOR_EXACTTITLESEARCH_DESC
 	EN	By default, certain unicode and pattern matching characters are stripped from album title search terms to avoid problems with SQLite and XML (= recommended). However, in rare cases it may lead to false positives.<br><i>Example:</i> if you're searching for album titles that contain <i>[ENG]</i>, the square brackets are removed and the result set will include all albums containing <i>ENG</i> or <i>eng</i>, e.g. <b>Eng</b>lish, l<b>eng</b>th, pass<b>eng</b>er.<br><br>You can disable this here if you're absolutely certain that your search terms do not contain any problematic characters (esp. sqlite control characters like single or double quotes) and you want the search to adhere more strictly to the search terms.<br><br><b>This setting only applies to <i>album and track title</i> searches in a few selected templates</b>.<br>For names of <b>artists, composers and genres</b>, the plugin will <b>always</b> use the less strict but <b>safer search option</b>.
+	DE	Im Standard werden bestimmte Unicode- und Platzhalterzeichen vom Suchausdruck des Albumtitels entfernt, um Probleme mit SQLite und XML zu vermeiden. In seltenen fällen führt das möglicherweise zu falschen Treffern. Beispiel: bei einer Suche nach Albumtiteln, die [ENG] enthält, wird die eckigen Klammern entfernt und es wird nach <i>ENG</i> gesucht. Die Trefferliste umfasst dann z.B. <i>Eng</i>lish, l<i>eng</i>th, pass<i>eng</i>er. Dies kann man durch diese Option verhindern, wenn sichergestellt ist, dass die Suchausdrücke keine kritischen Zeichen enthalten. Für andere Suchen nach Interpret, Stilrichtung, usw. wird immer die weniger strenge aber sicherere Option benutzt.
 
 SETTINGS_PLUGIN_DYNAMICPLAYLISTCREATOR_REFRESHCACHES
 	EN	Refresh plugin caches
+	DE	Plugin Zwischenspeicher löschen
 
 SETTINGS_PLUGIN_DYNAMICPLAYLISTCREATOR_REFRESHCACHES_DESC
 	EN	The <i>Dynamic Playlist Creator</i> plugin caches lists of artists, genres, composers and audio file types. They are automatically refreshed after an LMS rescan or a plugin update.<br><br>If you think there's a problem with the DPLC plugin caches (e.g. missing artists or genre lists in templates), this button allows you to force a refresh of all plugin caches.
-
+	DE	Die Zwischenspeiecher enthalten Listen von Interpreten, Stilrichtungen, Komponisten und Audio Dateitypen. Sie werden automatisch nach einem erneuten Durchsuchen der Sammlung durch LMS oder nach einem Plugin-Update erneuert. Im Falle eines Problems mit dem DPLC-Zwischenspeiecher kann die Aktualisierung durch diese Schaltfläche erzwungen werden.
+	
 SETTINGS_PLUGIN_DYNAMICPLAYLISTCREATOR_REFRESHCACHES_BUTTON
 	EN	Refresh now
+	DE	Jetzt erneuern
 
 SETTINGS_PLUGIN_DYNAMICPLAYLISTCREATOR_REFRESHCACHES_INPROGRESS
 	EN	Refreshing caches...
+	DE	Zwischenspeicher wird erneuert...
 
 PLUGIN_DYNAMICPLAYLISTCREATOR_LISTHEADER
 	EN	<b>Custom dynamic playlists created with this plugin:</b>
-
+	DE	<b>Eigene dynamische Wiedergabelisten, die mit diesem Plugin erstellt wurden:</b>
+	
 PLUGIN_DYNAMICPLAYLISTCREATOR_NODPLSFOUND
 	EN	No dynamic playlist found
-
+	DE	Keine dynamischen Wiedergabelisten gefunden
+	
 PLUGIN_DYNAMICPLAYLISTCREATOR_CONTEXTMENULIST
 	EN	context menu
-
+	DE	Kontextmenu
+	
 PLUGIN_DYNAMICPLAYLISTCREATOR_EDIT_ITEM
 	EN	Edit
-
+	DE	Bearbeiten
+	
 PLUGIN_DYNAMICPLAYLISTCREATOR_NEW_ITEM
 	EN	Create new dynamic playlist
-
+	DE	Neue dynamische Wiedergabeliste anlegen
+	
 PLUGIN_DYNAMICPLAYLISTCREATOR_UNSUPPORTEDVERSION
 	EN	This plugin creates custom dynamic playlists compatible <span class="emphbold">only</span> with <i>Dynamic Playlists</i> version <span class="emphbold">4</span>.
-
+	DE	Dieses Plugin erzeugt eigene dynamische Wiedergabelisten, <span class="emphbold">nur</span> mit <i>Dynamische Wiedergabelisten Plugin</i> Version <span class="emphbold">4</span> komatibel.
 PLUGIN_DYNAMICPLAYLISTCREATOR_DPLREFRESHMSG
 	EN	<span class="emphbold"><i>Dynamic Playlists</i> is updating the list of available dynamic playlists...</span>
+	DE	<span class="emphbold"><i>Dynamic Wiedergabelisten</i> aktualisiert die Liste der verfügbaren dynamischen Wiedergabelisten...</span>
+
 
 PLUGIN_DYNAMICPLAYLISTCREATOR_NEW_ITEM_TYPES_TITLE
 	EN	Select a template on which to base your new dynamic playlist:
+	DE	Wähle eine Vorlage als Grundlage für die neue dynamische Wiedergabeliste:
 
 PLUGIN_DYNAMICPLAYLISTCREATOR_EDIT_ITEM_NAME
 	EN	Dynamic Playlist Name
+	DE	Name der dynamischen Wiedergabeliste
 
 PLUGIN_DYNAMICPLAYLISTCREATOR_EDIT_ITEM_FILENAME
 	EN	File name (without extension)
+	DE	Dateiname (ohne Erweiterung)
 
 PLUGIN_DYNAMICPLAYLISTCREATOR_EXPORT_ITEM
 	EN	Export to Dynamic Playlists and delete in DPLC
+	DE	Exportiere nach Dynamische Wiedergabelisten und lösche in DPLC
 
 PLUGIN_DYNAMICPLAYLISTCREATOR_EXPORT_ITEM_INFO
 	EN	Do you want to export this dynamic playlist to the Dynamic Playlists folder for custom dynamic playlists called DPL-custom-lists and delete it from DPLC?
-
+	DE	Soll diese dynamische Wiedergabeliste in das Dynamische Wiedergabelisten Verzeichnis für eigene dynamische Wiedergabelisten exportiert und von DPLC gelöscht werden?
+	
 PLUGIN_DYNAMICPLAYLISTCREATOR_REMOVE_ITEM
 	EN	Delete
-
+	DE	Löschen
+	
 PLUGIN_DYNAMICPLAYLISTCREATOR_REMOVE_ITEM_QUESTION
 	EN	Are you sure you want to delete this dynamic playlist?
-
+	DE	Diese dynamische Wiedergabeliste wirklich löschen?
+	
 PLUGIN_DYNAMICPLAYLISTCREATOR_LANG_STRINGS_AND
 	EN	and
-
+	DE	und
+	
 PLUGIN_DYNAMICPLAYLISTCREATOR_LANG_STRINGS_OR
 	EN	or
-
+	DE	oder
+	
 PLUGIN_DYNAMICPLAYLISTCREATOR_LANG_STRINGS_SEARCH_CONTAINS
 	EN	contains
-
+	DE	enthält
+	
 PLUGIN_DYNAMICPLAYLISTCREATOR_LANG_STRINGS_SEARCH_DOESNT_CONTAIN
 	EN	does not contain
-
+	DE	enthält nicht
+	
 PLUGIN_DYNAMICPLAYLISTCREATOR_LANG_STRINGS_SEARCH_STARTS_WITH
 	EN	starts with
-
+	DE	beginnt mit
+	
 PLUGIN_DYNAMICPLAYLISTCREATOR_LANG_STRINGS_SEARCH_DOESNT_START_WITH
 	EN	does not start with
-
+	DE	beginnt nicht mit
+	
 PLUGIN_DYNAMICPLAYLISTCREATOR_SAVE
 	EN	Save
-
+	DE	Speichern
+	
 PLUGIN_DYNAMICPLAYLISTCREATOR_NEXT
 	EN	Next
-
+	DE	Weiter
+	
 PLUGIN_DYNAMICPLAYLISTCREATOR_NEW_ITEM_PARAMETERS_TITLE
 	EN	Please enter dynamic playlist parameters
+	DE	Bitte die Parameter für die dynamische Wiedergabeliste eingeben
 
 PLUGIN_DYNAMICPLAYLISTCREATOR_EDIT_ITEM_PARAMETERS_TITLE
 	EN	Edit dynamic playlist parameters
-
+	DE	Ändern der Parameter für die dynamische Wiedergabeliste
+	
 PLUGIN_DYNAMICPLAYLISTCREATOR_EDIT_ITEM_OVERWRITE
 	EN	Overwrite existing&nbsp;&nbsp;&nbsp;
-
+	DE	Überschreibe existierende&nbsp;&nbsp;&nbsp;
+	
 PLUGIN_DYNAMICPLAYLISTCREATOR_EDIT_ITEM_BASETEMPLATE
 	EN	Based on template
-
+	DE	Basierend auf Vorlage
+	
 PLUGIN_DYNAMICPLAYLISTCREATOR_EDIT_ITEM_BASETEMPLATE_SAVED
 	EN	saved
-
+	DE	gespeichert
 PLUGIN_DYNAMICPLAYLISTCREATOR_EDIT_ITEM_BASETEMPLATE_VERSION
 	EN	version
-
+	DE	Version
+	
 PLUGIN_DYNAMICPLAYLISTCREATOR_EDIT_ITEM_BASETEMPLATE_NEWVERSION
 	EN	new version
-
+	DE	neue Version
+	
 PLUGIN_DYNAMICPLAYLISTCREATOR_ERROR_SAVEFAILED
 	EN	Could not save dynamic playlist. Please check the server log for details.
-
+	DE	Konnte die dynamische Wiedergabeliste nicht speichern. Für Details bitte die Server-Logdatei prüfen.
+	
 PLUGIN_DYNAMICPLAYLISTCREATOR_ERROR_MISSING_DPLNAME
 	EN	Please enter a name for your dynamic playlist
+	DE	Bitte einen Namen für die dynamische Wiedergabeliste eingeben
 
 PLUGIN_DYNAMICPLAYLISTCREATOR_ERROR_MISSING_CUSTOMDIR
 	EN	Could not access the <i>DynamicPlaylistCreator</i> folder. Please read the <a href="https://github.com/AF-1/lms-dynamicplaylistcreator#faq">FAQ</a> and check the server log for details.
-
+	DE	Konnte nicht auf das <i>DynamicPlaylistCreator</i> Verzeichnis zugreifen. Bitte die <a href="https://github.com/AF-1/lms-dynamicplaylistcreator#faq">FAQ</a> lesen und für Details die Server-Logdatei prüfen.
+	
 PLUGIN_DYNAMICPLAYLISTCREATOR_ERROR_MISSING_DPLCUSTOMDIR
 	EN	Could not find <i>Dynamic Playlists</i> folder called <span class="emphbold">DPL-custom-lists</span> for custom dynamic playlists. Check the server log for details.
-
+	DE	Konnte das <i>Dynamische Wiedergabelisten</i> Verzeichnis <span class="emphbold">DPL-custom-lists</span> nicht finden. Für Details bitte die Server-Logdatei prüfen.
+	
 PLUGIN_DYNAMICPLAYLISTCREATOR_ERROR_DPLFILENAMEALREADYEXISTS
 	EN	A dynamic playlist file with this name already exists in the <i>Dynamic Playlists</i> folder called <span class="emphbold">DPL-custom-lists</span>.<br>Please <span class="emphbold">edit</span> the dynamic playlist you want to export and <span class="emphbold">change its <i>file</i> name</span>.
+	DE	Eine Dynamische-Wiedergabelisten-Datei mit diesem Namen existiert bereits im <i>Dynamische Wiedergabelisten</i> Verzeichnis <span class="emphbold">DPL-custom-lists</span>.<br>Bitte <span class="emphbold">bearbeite</span> die zu exportierende dynamische Wiedergabeliste und <span class="emphbold">ändere den <i>Datei</i>namen</span>.
+
+PLUGIN_DYNAMICPLAYLISTS4_PARAMNAME_SELECTYEAR
+	EN	Select Year
+	DE	Jahr auswählen
+	
+	
